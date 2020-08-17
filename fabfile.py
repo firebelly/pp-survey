@@ -13,8 +13,7 @@ def deploy(assets='y'):
   if assets != 'n':
     local('rm -rf web/assets/dist')
     local('yarn build:production')
-    run('mkdir -p ' + env.remotepath + '/dist')
-    put('dist', env.remotepath + '/dist/')
+    put('dist', env.remotepath)
 
 def update():
   with cd(env.remotepath):

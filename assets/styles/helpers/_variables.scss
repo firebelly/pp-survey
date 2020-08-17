@@ -3,7 +3,7 @@
 // Colors
 $colors: (
   'pink':       #EB008B,
-  'blue':       #EB008B,
+  'blue':       #0099D9,
   'navy':       #252D65,
   'yellow':     #FFE500,
   'tan':        #ECE7E2,
@@ -17,15 +17,16 @@ $colors: (
 
 // Breakpoints
 $breakpoint-sm: 520px;
-$breakpoint-md: 768px;
+$breakpoint-md: 860px;
 $breakpoint-lg: 1000px;
 $breakpoint-nav: 1100px;
 $breakpoint-xl: 1200px;
 
 // Site Wrapper
-$sitewrapper: 1400px;
+$sitewrapper: 1215px;
 
 // Padding/spacing
 $beat: 10px;
 $padding-sm: 20px;
-$padding-md: 40px;
+$padding-md: 95px;
+$padding-lg: 190px;

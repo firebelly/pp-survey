@@ -10,6 +10,18 @@
 ///   font-family: 'Custom Font Family';
 /// }
 
+@mixin avenir-bold {
+  font-family: 'Avenir Next W01', 'AvenirNext-Bold', 'arial', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin avenir-heavy {
+  font-family: 'Avenir Next W01', 'AvenirNext-Heavy', 'arial black', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 /// Mixin to allow us to concisely define all aspects of a paragraph style (except for family.)
 /// @param {number} $size - Font size specified in pixels (without 'px')
 /// @param {number} $lh - Line height specified in pixels (without 'px')
@@ -21,12 +33,10 @@
 ///     @include font-display; // The font face
 ///     @include paragraph-style (12, 16, $ls: .075em, $tt: uppercase); // Other properties
 ///   }
-@mixin paragraph-style ($size, $lh, $ls: 0em, $w: normal, $tt: none) {
+@mixin paragraph-style ($size, $lh, $ls: 0em) {
   font-size: #{$size}px;
   line-height: ($lh / $size);
   letter-spacing: $ls;
-  text-transform: $tt;
-  font-weight: $w;
 }
 
 // Type Style Mixins + Classes
@@ -41,3 +51,17 @@
 /// .h1 {
 ///   @include h1;
 /// }
+
+@mixin h1 {
+  @include avenir-heavy;
+  @include paragraph-style(40, 40, -0.02em);
+}
+
+@mixin p1 {
+  @include avenir-bold;
+  @include paragraph-style(18, 20);
+
+  @include media-md {
+    @include paragraph-style(24, 30);
+  }
+}
