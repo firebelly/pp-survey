@@ -1,0 +1,59 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Planned Parenthood Survey</title>
+
+    <link rel="stylesheet" href="dist/assets/styles/main.css">
+    <link rel="shortcut icon" type="image/ico" href="dist/assets/images/favicon.png">
+
+    <!-- Inject SVGs Defs for SVG icon use -->
+    <script>
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", "dist/assets/svgs-defs.svg", true);
+      ajax.send();
+      ajax.onload = function(e) {
+        var div = document.createElement("div");
+        div.className += "svg-defs hidden";
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="breakpoint-indicator"></div>
+
+    <main class="site-main" role="main">
+      <div class="sitewrapper">
+        <a href="https://www.plannedparenthood.org/" rel="noopener" target="_blank" class="pp-logo"><svg class="icon pp-logo" aria-hidden="true" role="presentation"><use xlink:href="#pp-logo"/></svg></a>
+
+        <h1>Campaign Research<br> <span class="es">Investigación de Campaña</span></h1>
+
+        <div class="content">
+          <p>Thanks for your interest! Please choose your preferred language.  </p>
+          <p>¡Gracias por tu interés! Por favor elija su idioma preferido.</p>
+
+          <p class="buttons">
+            <a href="#">English</a>
+            <a href="#">Español</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="dist/assets/scripts/manifest.js"></script>
+    <script src="dist/assets/scripts/vendor.js"></script>
+    <script src="dist/assets/scripts/main.js"></script>
+    <script type="text/javascript">// Google Analytics
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']); // Replace "XXXXX-X" with your account code
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
