@@ -8,11 +8,12 @@ env.git_branch = 'master'
 env.warn_only = True
 
 def deploy(assets='y'):
+  update()
   # build and sync production assets
   if assets != 'n':
     local('rm -rf web/assets/dist')
     local('yarn build:production')
-    run('mkdir -p ' + env.remotepath + '/web/assets/dist')
+    run('mkdir -p ' + env.remotepath + '/dist')
     put('dist', env.remotepath + '/dist/')
 
 def update():
