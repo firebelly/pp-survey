@@ -3,7 +3,7 @@ import os
 
 env.hosts = ['survey.firebelly.co']
 env.user = 'firebelly'
-env.remotepath = '/home/firebelly/webapps/pp-survey'
+env.remotepath = '/home/firebelly/webapps/pp_survey'
 env.git_branch = 'master'
 env.warn_only = True
 
