@@ -10,8 +10,7 @@ import home from './routes/home';
 
 // Populate Router instance with DOM routes
 const routes = new Router({
-  common,
-  home
+  common
 });
 
 // Inits
