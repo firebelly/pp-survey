@@ -33,16 +33,16 @@ export default {
       }
     });
 
-    // Set the page visited cookie
-    document.cookie = "visited=true";
 
     // Check to see if the cookie is there
     if (document.cookie.split(';').some(function(item) {
-        return item.trim().indexOf('visited=') == 0
+        return item.trim().indexOf('pageVisited=') == 0
     })) {
       _displayVisitedModal();
     }
 
+    // Set the page visited cookie
+    document.cookie = "pageVisited=true";
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired
