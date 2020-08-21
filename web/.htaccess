@@ -3,6 +3,7 @@
 
     # Ensure consistent www URL
     RewriteCond %{REQUEST_URI} !\.well-known/acme-challenge
+    RewriteCond %{HTTP_HOST} !^survey\.firebelly\.co [NC]
     RewriteCond %{HTTP_HOST} !^pp-survey\.localhost [NC]
     RewriteRule ^(.*)$ https://survey.firebelly.co/$1 [R=301,L]
 
