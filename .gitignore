@@ -1,8 +1,34 @@
-node_modules
-npm-debug.log
-*.sublime-project
-*.sublime-workspace
+/.env
+/.env.production
+/.idea
+/.todo
+/.notes
+/vendor
 .DS_Store
-fabfile.pyc
+
+# Build
+node_modules
+
+# Letsencrypt
+.well-known
+
+# Fabfile
+*.pyc
+
+# Bower
+bower_components
+
+# Compiled Assets
 dist
-yarn-error.log
+web/assets/dist/css/main.css
+web/assets/dist/js/main.js
+
+# Licensed fonts
+web/assets/fonts
+
+# Uploads
+web/imager
+web/uploads
+
+# php settings
+.user.ini

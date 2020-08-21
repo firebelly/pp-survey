@@ -1,0 +1,22 @@
+dateModified: 1598031781
+email:
+  fromEmail: matt@firebellydesign.com
+  fromName: 'PP Survey'
+  transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  assetrev:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: 'PP Survey'
+  schemaVersion: 3.5.12
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

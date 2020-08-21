@@ -7,8 +7,8 @@
     <title>Planned Parenthood Campaign Research Survey</title>
 
     <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/fd4eb0bb-1ef4-4a1a-ac07-2d09dedf13c4.css"/>
-    <link rel="stylesheet" href="dist/assets/styles/main.css?id=e78b4f471efd59d9aea1">
-    <link rel="shortcut icon" type="image/ico" href="dist/assets/images/favicon.png">
+    <link rel="stylesheet" href="{{ rev('/styles/main.css') }}">
+    <link rel="shortcut icon" type="image/ico" href="{{ rev('/images/favicon.png') }}">
 
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -22,7 +22,7 @@
     <!-- Inject SVGs Defs for SVG icon use -->
     <script>
       var ajax = new XMLHttpRequest();
-      ajax.open("GET", "dist/assets/svgs-defs.svg", true);
+      ajax.open("GET", "{{ rev('/svgs-defs.svg') }}", true);
       ajax.send();
       ajax.onload = function(e) {
         var div = document.createElement("div");
@@ -43,7 +43,7 @@
     </script>
 
   </head>
-  <body>
+  <body{{ siteSettings.deadEnd == 'on' ? ' class="dead-end"' : '' }}>
     <div id="breakpoint-indicator"></div>
 
     <main class="site-main" role="main">
@@ -53,23 +53,28 @@
         <h1>Campaign Research<br> <span class="es">Investigación de Campaña</span></h1>
 
         <div class="content">
-          <p>Thanks for your interest! Please choose your preferred language.  </p>
-          <p>¡Gracias por tu interés! Por favor elija su idioma preferido.</p>
+          {% if siteSettings.deadEnd == 'on' %}
+            <p>Thank you for your time! Unfortunately, the study is no longer open. We appreciate your willingness to help! For additional information, visit <a href="https://www.plannedparenthood.org/learn" rel="noopener">Planned Parenthood</a>.  </p>
+            <p>¡Muchas gracias por tu tiempo!  Desafortunadamente, la encuesta ya no está abierta. ¡Apreciamos tu disponibilidad para ayudarnos! Para más información, puedes visitar <a href="https://www.plannedparenthood.org/es/temas-de-salud" rel="noopener">Planned Parenthood</a>.</p>
+          {% else %}
+            <p>Thanks for your interest! Please choose your preferred language.  </p>
+            <p>¡Gracias por tu interés! Por favor elija su idioma preferido.</p>
 
-          <div class="buttons">
-            <div>
-              <a href="https://firebellydesign.optimalworkshop.com/questions/emtyw0ph-0-0-0-0" class="button" rel="noopener">English</a>
+            <div class="buttons">
+              <div>
+                <a href="https://firebellydesign.optimalworkshop.com/questions/emtyw0ph-0-0-0-0" class="button" rel="noopener">English</a>
+              </div>
+              <div>
+                <a href="https://firebellydesign.optimalworkshop.com/questions/emtyw0ph-0-0-0-0-0" class="button" rel="noopener">Español</a>
+              </div>
             </div>
-            <div>
-              <a href="https://firebellydesign.optimalworkshop.com/questions/emtyw0ph-0-0-0-0-0" class="button" rel="noopener">Español</a>
-            </div>
-          </div>
+          {% endif %}
         </div>
       </div>
     </main>
 
-    <script src="dist/assets/scripts/manifest.js?id=039222c4964d642c317b"></script>
-    <script src="dist/assets/scripts/vendor.js?id=638a396e6e769f7941f3"></script>
-    <script src="dist/assets/scripts/main.js?id=f3546a949a33977afdeb"></script>
+    <script src="{{ rev('/scripts/manifest.js') }}"></script>
+    <script src="{{ rev('/scripts/vendor.js') }}"></script>
+    <script src="{{ rev('/scripts/main.js') }}"></script>
   </body>
 </html>

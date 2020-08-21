@@ -7,10 +7,10 @@ const publicPath = path => `${mix.config.publicPath}/${path}`;
 const src = path => `assets/${path}`;
 
 // Public Path
-mix.setPublicPath('dist/assets');
+mix.setPublicPath('web/assets/dist');
 
 // Browsersync
-mix.browserSync('pp-survey.static');
+mix.browserSync('pp-survey.localhost');
 
 // Styles
 mix.sass(src`styles/main.scss`, 'styles');
@@ -21,13 +21,11 @@ mix.js(src`scripts/main.js`, 'scripts')
 
 // Assets
 mix.copyDirectory(src`images`, publicPath`images`)
-   // If you have font files
-   // .copyDirectory(src`fonts`, publicPath`fonts`)
    .copyDirectory(src`svgs`, publicPath`svgs`);
 
 // Autoload
 mix.autoload({
-  jquery: ['$', 'window.jQuery']
+  jquery: ['$', 'window.jQuery', 'jQuery']
 });
 
 let SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');

@@ -1,0 +1,13 @@
+contentColumnType: boolean
+fieldGroup: e31d1de6-cc1b-46f8-b0af-dddf08a3f1aa
+handle: deadEnd
+instructions: 'Enable the dead-end message? Flip the switch Meg!'
+name: Dead-end
+searchable: false
+settings:
+  default: false
+  offLabel: 'Dead-end Disabled'
+  onLabel: 'Dead-end Enabled'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

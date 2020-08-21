@@ -50,6 +50,16 @@ h1 {
       margin-top: $padding-sm;
     }
   }
+
+  a:not(.button) {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    &:hover,
+    &:focus {
+      color: color('pink');
+    }
+  }
 }
 
 .buttons {
